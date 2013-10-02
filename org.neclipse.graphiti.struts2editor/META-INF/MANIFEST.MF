@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Struts 2 Editor
-Bundle-SymbolicName: org.neclipse.graphiti.struts2editor;singleton:=true
+Bundle-SymbolicName: org.neclipse.gef.struts2editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: org.neclipse.graphiti.struts2editor.S2Plugin
+Bundle-Activator: org.neclipse.gef.struts2editor.S2Plugin
 Bundle-Vendor: Neeraj Bhusare
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,

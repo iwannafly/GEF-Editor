@@ -6,8 +6,8 @@
  <extension
          point="org.eclipse.ui.editors">
       <editor
-            class="org.neclipse.graphiti.struts2editor.ui.editor.S2Editor"
-            contributorClass="org.neclipse.graphiti.struts2editor.ui.editor.S2EditorActionBarContributor"
+            class="org.neclipse.gef.struts2editor.ui.editor.S2Editor"
+            contributorClass="org.neclipse.gef.struts2editor.ui.editor.S2EditorActionBarContributor"
             extensions="struts"
             icon="icons/11182.site_element.gif"
             id="org.simplestruts2.ui.Struts2Editor"
@@ -17,7 +17,7 @@
  <extension
        point="org.eclipse.ui.views">
     <view
-          class="org.neclipse.graphiti.struts2editor.ui.views.S2Browser"
+          class="org.neclipse.gef.struts2editor.ui.views.S2Browser"
           icon="icons/browser.gif"
           id="org.simplestruts2.core.browserview"
           name="Struts 2 Browser"
@@ -27,14 +27,14 @@
  <extension
        point="org.eclipse.ui.perspectives">
     <perspective
-          class="org.neclipse.graphiti.struts2editor.ui.S2ModelerPerspective"
+          class="org.neclipse.gef.struts2editor.ui.S2ModelerPerspective"
           fixed="false"
           icon="icons/11182.site_element.gif"
           id="org.simplestruts2.core.perspective.s2modeler"
           name="S2 Modeler">
     </perspective>
     <perspective
-          class="org.neclipse.graphiti.struts2editor.ui.S2TutorPerspective"
+          class="org.neclipse.gef.struts2editor.ui.S2TutorPerspective"
           fixed="false"
           icon="icons/reltopics_co.gif"
           id="org.simplestruts2.core.perspective.s2tutor"
@@ -47,8 +47,8 @@
      	  collapsible="true"	
           name="Administrative elements">
        <item
-             modelclass="org.neclipse.graphiti.struts2editor.model.rewrite.S2Package"
-             toolentryclass="org.neclipse.graphiti.struts2editor.ui.editor.S2CombinedTemplateCreationEntry"
+             modelclass="org.neclipse.gef.struts2editor.model.rewrite.S2Package"
+             toolentryclass="org.neclipse.gef.struts2editor.ui.editor.S2CombinedTemplateCreationEntry"
              description="Create Struts 2 Package"
              largeimage="icons/10464.package_obj.gif"
              name="Package"
@@ -56,8 +56,8 @@
        </item>
      	
      	<item
-             modelclass="org.neclipse.graphiti.struts2editor.model.rewrite.S2Action"
-             toolentryclass="org.neclipse.graphiti.struts2editor.ui.editor.S2CombinedTemplateCreationEntry"
+             modelclass="org.neclipse.gef.struts2editor.model.rewrite.S2Action"
+             toolentryclass="org.neclipse.gef.struts2editor.ui.editor.S2CombinedTemplateCreationEntry"
              description="Create Struts 2 Ation"
              largeimage="icons/10464.package_obj.gif"
              name="Action"
