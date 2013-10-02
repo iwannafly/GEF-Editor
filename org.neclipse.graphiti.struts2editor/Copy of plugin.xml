@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="o.ss.palette.extension" name="paletteextension" schema="schema/o.ss.palette.extension.exsd"/>
+   <extension-point id="s2.editor.palette.extension" name="S2Editor Palette Extension" schema="schema/s2.editor.palette.extension.exsd"/>
+ <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.simplestruts2.core.ui.editor.S2Editor"
+            contributorClass="org.simplestruts2.core.ui.editor.S2EditorActionBarContributor"
+            extensions="struts"
+            icon="icons/11182.site_element.gif"
+            id="org.simplestruts2.ui.Struts2Editor"
+            name="Struts 2 Editor">
+      </editor>
+   </extension>
+ <extension
+       point="org.eclipse.ui.views">
+    <view
+          class="org.simplestruts2.core.ui.views.S2Browser"
+          icon="icons/browser.gif"
+          id="org.simplestruts2.core.browserview"
+          name="Struts 2 Browser"
+          restorable="true">
+    </view>
+ </extension>
+ <extension
+       point="org.eclipse.ui.perspectives">
+    <perspective
+          class="org.simplestruts2.core.ui.S2ModelerPerspective"
+          fixed="false"
+          icon="icons/11182.site_element.gif"
+          id="org.simplestruts2.core.perspective.s2modeler"
+          name="S2 Modeler">
+    </perspective>
+    <perspective
+          class="org.simplestruts2.core.ui.S2TutorPerspective"
+          fixed="false"
+          icon="icons/reltopics_co.gif"
+          id="org.simplestruts2.core.perspective.s2tutor"
+          name="S2 Tutor">
+    </perspective>
+ </extension>
+ <extension
+       point="o.ss.palette.extension">
+    <category
+     	  collapsible="true"	
+          name="Administrative elements">
+       <item
+             modelclass="org.simplestruts2.model.S2Bean"
+             toolentryclass="org.simplestruts2.core.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create a new Struts Bean"
+             largeimage="icons/11880.bmp.gif"
+             name="Bean"
+             smallimage="icons/11880.bmp.gif">
+       </item>
+       <item
+             modelclass="org.simplestruts2.model.S2Constant"
+             toolentryclass="org.simplestruts2.core.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create Struts 2 Constant"
+             largeimage="icons/17405.thread_view.png"
+             name="Constant"
+             smallimage="icons/17405.thread_view.png">
+       </item>
+       <item
+             modelclass="org.simplestruts2.model.rewrite.S2Package"
+             toolentryclass="org.simplestruts2.core.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create Struts 2 Package"
+             largeimage="icons/10464.package_obj.gif"
+             name="Package"
+             smallimage="icons/10464.package_obj.gif">
+       </item>
+       <item
+             modelclass="org.simplestruts2.model.S2Include"
+             toolentryclass="org.simplestruts2.core.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create Struts 2 Include"
+             largeimage="icons/showchild_mode.gif"
+             name="Include"
+             smallimage="icons/showchild_mode.gif">
+       </item></category>
+    <category
+          collapsible="true"
+          name="Request Handling">
+       <item
+             modelclass="org.simplestruts2.model.S2Action"
+             toolentryclass="org.simplestruts2.core.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create Struts 2 Action"
+             largeimage="icons/innerclass_public_obj.gif"
+             name="Action"
+             smallimage="icons/innerclass_public_obj.gif">
+       </item>
+       <item
+             modelclass="java.lang.Object"
+             toolentryclass="org.simplestruts2.core.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create Struts 2 Default Action Reference"
+             largeimage="icons/innerclass_public_obj.gif"
+             name="Default Action Reference"
+             smallimage="icons/innerclass_public_obj.gif">
+       </item>
+       <item
+             modelclass="org.simplestruts2.model.S2Interceptors"
+             toolentryclass="org.simplestruts2.core.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create Struts 2 Interceptor"
+             largeimage="icons/arraypartition_obj.gif"
+             name="Interceptors"
+             smallimage="icons/arraypartition_obj.gif">
+       </item>
+       <item
+             modelclass="org.simplestruts2.model.S2Interceptor"
+             toolentryclass="org.simplestruts2.core.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create Struts 2 Interceptor"
+             largeimage="icons/remove_correction.gif"
+             name="Interceptor"
+             smallimage="icons/remove_correction.gif">
+       </item>
+       <item
+             modelclass="org.simplestruts2.model.S2InterceptorStack"
+             toolentryclass="org.simplestruts2.core.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create Struts 2 Interceptor-stack"
+             largeimage="icons/thin_max_view.gif"
+             name="Interceptor-Stack"
+             smallimage="icons/thin_max_view.gif">
+       </item>
+       <item
+             modelclass="org.simplestruts2.model.S2InterceptorRef"
+             toolentryclass="org.simplestruts2.core.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create Struts 2 Interceptor-ref"
+             largeimage="icons/change.gif"
+             name="Interceptor-ref"
+             smallimage="icons/change.gif">
+       </item></category>
+    <category
+          collapsible="true"
+          name="Error Handling">
+       <item
+             modelclass="java.lang.Object"
+             toolentryclass="org.simplestruts2.core.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create Struts 2 Exception mappings"
+             largeimage="icons/10377.enum_obj.gif"
+             name="Exception"
+             smallimage="icons/10377.enum_obj.gif">
+       </item></category>
+    <category
+          collapsible="true"
+          name="Resources">
+       <item
+             modelclass="org.simplestruts2.model.S2JSPHTML"
+             toolentryclass="org.simplestruts2.core.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create JSP/HTML pages"
+             largeimage="icons/14474.PD_Plugin.gif"
+             name="JSP/HTML"
+             smallimage="icons/14474.PD_Plugin.gif">
+       </item></category>
+    <category
+          collapsible="true"
+          name="Comments">
+       <item
+             modelclass="org.simplestruts2.model.S2Comment"
+             toolentryclass="org.simplestruts2.core.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create a new Comment"
+             largeimage="icons/10377.enum_obj.gif"
+             name="Comment"
+             smallimage="icons/10377.enum_obj.gif">
+       </item></category>
+ </extension>
+</plugin>

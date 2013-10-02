@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="o.ss.palette.extension" name="paletteextension" schema="schema/o.ss.palette.extension.exsd"/>
+   <extension-point id="s2.editor.palette.extension" name="S2Editor Palette Extension" schema="schema/s2.editor.palette.extension.exsd"/>
+ <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="org.neclipse.graphiti.struts2editor.ui.editor.S2Editor"
+            contributorClass="org.neclipse.graphiti.struts2editor.ui.editor.S2EditorActionBarContributor"
+            extensions="struts"
+            icon="icons/11182.site_element.gif"
+            id="org.simplestruts2.ui.Struts2Editor"
+            name="Struts 2 Editor">
+      </editor>
+   </extension>
+ <extension
+       point="org.eclipse.ui.views">
+    <view
+          class="org.neclipse.graphiti.struts2editor.ui.views.S2Browser"
+          icon="icons/browser.gif"
+          id="org.simplestruts2.core.browserview"
+          name="Struts 2 Browser"
+          restorable="true">
+    </view>
+ </extension>
+ <extension
+       point="org.eclipse.ui.perspectives">
+    <perspective
+          class="org.neclipse.graphiti.struts2editor.ui.S2ModelerPerspective"
+          fixed="false"
+          icon="icons/11182.site_element.gif"
+          id="org.simplestruts2.core.perspective.s2modeler"
+          name="S2 Modeler">
+    </perspective>
+    <perspective
+          class="org.neclipse.graphiti.struts2editor.ui.S2TutorPerspective"
+          fixed="false"
+          icon="icons/reltopics_co.gif"
+          id="org.simplestruts2.core.perspective.s2tutor"
+          name="S2 Tutor">
+    </perspective>
+ </extension>
+ <extension
+       point="o.ss.palette.extension">
+    <category
+     	  collapsible="true"	
+          name="Administrative elements">
+       <item
+             modelclass="org.neclipse.graphiti.struts2editor.model.rewrite.S2Package"
+             toolentryclass="org.neclipse.graphiti.struts2editor.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create Struts 2 Package"
+             largeimage="icons/10464.package_obj.gif"
+             name="Package"
+             smallimage="icons/10464.package_obj.gif">
+       </item>
+     	
+     	<item
+             modelclass="org.neclipse.graphiti.struts2editor.model.rewrite.S2Action"
+             toolentryclass="org.neclipse.graphiti.struts2editor.ui.editor.S2CombinedTemplateCreationEntry"
+             description="Create Struts 2 Ation"
+             largeimage="icons/10464.package_obj.gif"
+             name="Action"
+             smallimage="icons/10464.package_obj.gif">
+       </item>  
+     </category>
+ </extension>
+</plugin>
